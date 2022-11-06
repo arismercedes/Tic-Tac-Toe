@@ -1,0 +1,14 @@
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+}
+.gameboard-box {
+    background-color: aqua;
+    border: 2px solid;
+    height: 200px;
+    width: 200px;
+}
+.gameboard-box:hover {
+    background-color: aquamarine;
+}
