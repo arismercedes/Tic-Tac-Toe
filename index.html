@@ -4,25 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
-    <div>
-        <h3 id="turn-text">Player ${TestTurn}</h3>
+    <div class="wrapper">
+        <div class="menu grid">
+            <div class="signs">
+                <img src="./img/x-mark-01.svg" alt="x" class="sign-icon turquoise-tint">
+                <img src="./img/o-mark-01.svg" alt="x" class="sign-icon yellow-tint"></div>
+            <div class="turn-active">
+                <div id="turn-icon" class="x-icon">TURN</div>
+                <p></p>
+            </div>
+            <button class="restart-btn btn"><img src="./img/restart.svg" alt="restart button" class="restart-icon"></button>
+        </div>
+        <div class="gameboard grid">
+            <div class="gameboard-box" data-index="0"></div>
+            <div class="gameboard-box" data-index="1"></div>
+            <div class="gameboard-box" data-index="2"></div>
+            <div class="gameboard-box" data-index="3"></div>
+            <div class="gameboard-box" data-index="4"></div>
+            <div class="gameboard-box" data-index="5"></div>
+            <div class="gameboard-box" data-index="6"></div>
+            <div class="gameboard-box" data-index="7"></div>
+            <div class="gameboard-box" data-index="8"></div>
+        </div>
+        <div class="scores grid">
+            <div class="score score-x bk-turquoise">
+                <p>X</p>
+                <p class="x-num score-num">0</p>
+            </div>
+            <div class="score ties bk-gray">
+                <p>TIES</p>
+                <p class="ties-num score-num">0</p>
+            </div>
+            <div class="score score-o bk-yellow">
+                <p>O</p>
+                <p class="o-num score-num">0</p>
+            </div>
+        </div>
     </div>
-    <div class="gameboard">
-        <div class="gameboard-box" data-index="0"></div>
-        <div class="gameboard-box" data-index="1"></div>
-        <div class="gameboard-box" data-index="2"></div>
-        <div class="gameboard-box" data-index="3"></div>
-        <div class="gameboard-box" data-index="4"></div>
-        <div class="gameboard-box" data-index="5"></div>
-        <div class="gameboard-box" data-index="6"></div>
-        <div class="gameboard-box" data-index="7"></div>
-        <div class="gameboard-box" data-index="8"></div>
+    
+    <div id="modal" class="hide">
+        <div class="winning-banner">
+        <p class="match-msg gray">YOU WON!</p>
+        
+        <div class="winner">
+            <span class="winner-sign"></span>
+            <p class="win-rnd-txt">TAKES THE ROUND</p>
+        </div>
+        <div class="winning-btns">
+            <button class="btn quit bk-gray">QUIT</button>
+            <button class="btn next-round bk-yellow">NEXT ROUND</button>
+        </div>
     </div>
 </body>
 </html>

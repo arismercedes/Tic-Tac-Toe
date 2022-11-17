@@ -1,14 +1,216 @@
-.gameboard {
+body {
+    background-color: #1A2B32;
+    text-align: center;
+    width: 100%;
     display: grid;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+.wrapper {
+    margin: auto;
+}
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #1A2B32;
+    font-size: 18px;
+    font-weight: 600;
+}
+.grid {
+    display: grid;
+    gap: 30px;
     grid-template-columns: repeat(3, 1fr);
+}
+.menu{
+    margin-top: 5vh;
+    width: 600px;
+}
+.signs {
+    display: flex;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.sign-icon + img {
+    margin-left: 6px;
+} 
+.turn-active {
+    background-color: #1E363F;
+    border-radius: 12px;
+    display: flex;
+    height: 50px;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, .4);
+}
+#turn-icon {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    color: #A9BEC9;
+}
+#turn-icon::before {
+    content: '';
+    width: 20px;
+    aspect-ratio: 1;
+    margin-right: 15px;
+    filter: invert(99%) sepia(24%) saturate(2705%) hue-rotate(173deg) brightness(81%) contrast(92%);
+}
+.restart-btn {
+    border-radius: 6px;
     width: fit-content;
+    align-self: center;
+    aspect-ratio: 1;
+    margin-left: auto;
+}
+.restart-icon {
+    height: 20px;
+    width: auto;
+    margin: auto;
+}
+.gameboard {
+    margin-top: 30px;
+    width: 600px;
+    height: 600px;
 }
 .gameboard-box {
-    background-color: aqua;
-    border: 2px solid;
-    height: 200px;
-    width: 200px;
+    background-color: #1E363F;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, .4);
+    border-radius: 12px;
+    /* height: 200px; */
+    /* width: 200px; */
+    font-size: 60px;
+    text-align: center;
+    padding: 30px;
+    aspect-ratio: 1;
+    display: grid;
 }
 .gameboard-box:hover {
-    background-color: aquamarine;
+    background-color: #A9BEC9;
+    cursor: pointer;
+}
+.scores{
+    border-radius: 10px;
+    width: 600px;
+    margin-top: 20px;
+}
+.score{
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+.score-num {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.xboard::before {
+    content: '';
+    background-image: url('./img/x-mark-01.svg');
+    width: auto;
+    filter: invert(73%) sepia(47%) saturate(661%) hue-rotate(121deg) brightness(86%) contrast(84%);
+}
+.oboard::before  {
+    content: '';
+    background-image: url('./img/o-mark-01.svg');
+    width: auto;
+    filter: invert(91%) sepia(15%) saturate(4164%) hue-rotate(328deg) brightness(97%) contrast(97%);
+}
+.x-icon::before {
+    content: '';
+    background-image: url('./img/x-mark-01.svg');
+    width: auto;
+}
+.o-icon::before {
+    content: '';
+    background-image: url('./img/o-mark-01.svg');
+    width: auto;
+    height: 100%;
+}
+
+#modal {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    
+}
+.winning-banner {
+    background-color: #1E363F;
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+}
+.winner {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    width: fit-content;
+}
+.winner-sign{
+    display: flex;
+}
+.winner-sign::before {
+    position: relative;
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+}
+.winner-o::before {
+    content: '';
+    background-image: url('./img/o-mark-01.svg');
+    filter: invert(91%) sepia(15%) saturate(4164%) hue-rotate(328deg) brightness(97%) contrast(97%);
+}
+.winner-x::before {
+    content: '';
+    background-image: url('./img/x-mark-01.svg');
+    filter: invert(73%) sepia(47%) saturate(661%) hue-rotate(121deg) brightness(86%) contrast(84%);
+}
+.win-rnd-txt {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.quit {
+margin-right: 15px;
+}
+
+.hide {
+    visibility: hidden;
+}
+.show {
+    visibility:visible;
+}
+
+
+/* *******************COLORS******************* */
+.bk-turquoise {
+    background-color: #30C5BC;
+}
+.bk-yellow {
+    background-color: #F3B137;
+}
+.bk-gray {
+    background-color: #A9BEC9;
+}
+.turquoise {
+    color: #30C5BC;
+}
+.yellow {
+    color: #F3B137;
+}
+.gray {
+    color: #A9BEC9;
+}
+
+.turquoise-tint {
+    filter: invert(73%) sepia(47%) saturate(661%) hue-rotate(121deg) brightness(86%) contrast(84%);
+}
+.yellow-tint {
+filter: invert(91%) sepia(15%) saturate(4164%) hue-rotate(328deg) brightness(97%) contrast(97%);
 }
